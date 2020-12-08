@@ -6,7 +6,7 @@ tries = 0
 
 while True:
     guess = (max_value + min_value) // 2
-    answer = input("Is {} your number? ".format(guess))
+    answer = input("Is {} your number (h,l,q,y)? ".format(guess))
 
     if answer == "q":
         break
@@ -17,10 +17,10 @@ while True:
     elif answer == "l":
         min_value = guess
     elif answer == "y":
-        print("I got it in {} tries!".format(tries))
+        print("I got it in {} tries!".format(tries + 1))
         break
     else:
-        print("Please enter h, l, or y")
+        print("Please enter h, l, q, or y")
 
     if answer in "hl":
         tries += 1  # tries = tries + 1
