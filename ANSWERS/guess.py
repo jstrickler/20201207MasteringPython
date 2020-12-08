@@ -24,3 +24,6 @@ while True:
 
     if answer in "hl":
         tries += 1  # tries = tries + 1
+
+    if answer == "foo":
+        print("blah")
