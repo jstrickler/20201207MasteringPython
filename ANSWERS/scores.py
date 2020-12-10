@@ -1,29 +1,27 @@
 #!/usr/bin/env python
 
-scores_by_student = {}
 sum_of_scores = 0.0
 
+# biz logic
 with open("../DATA/testscores.dat") as scores_in:
 
-    for line in scores_in:
+    for number_of_scores, line in enumerate(scores_in):
         (name, score) = line.split(":")
         score = int(score)
-        scores_by_student[name] = score
         sum_of_scores += score
 
-for student, score in sorted(scores_by_student.items()):
-    if score > 94:
-        grade = 'A'
-    elif score > 88:
-        grade = 'B'
-    elif score > 82:
-        grade = 'C'
-    elif score > 74:
-        grade = 'D'
-    else:
-        grade = 'F'
+        if score > 94:
+            grade = 'A'
+        elif score > 88:
+            grade = 'B'
+        elif score > 82:
+            grade = 'C'
+        elif score > 74:
+            grade = 'D'
+        else:
+            grade = 'F'
 
-    print("{:20s} {} {}".format(student, score, grade))
+        print("{:20s} {} {}".format(name, score, grade))
 
-average = sum_of_scores/len(scores_by_student)
+average = sum_of_scores/number_of_scores
 print("\naverage score is  {:.2f}\n".format(average))

@@ -3,12 +3,12 @@
 import sys
 
 try:
-    celsius = float(input("Enter Celsius temp: "))
+    raw_input = input("Enter Celsius temp: ")
+    celsius = float(raw_input)
 except ValueError as e:
     print("Error!", e)
     sys.exit(1)
-
-fahrenheit = ((9 * celsius) / 5) + 32
-
-print("{:.1f} C is {:.1f} F".format(celsius, fahrenheit))
+else:
+    fahrenheit = ((9 * celsius) / 5) + 32
+    print("{:.1f} C is {:.1f} F".format(celsius, fahrenheit))
 
