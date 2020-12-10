@@ -10,7 +10,8 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A110 cupidatat non proident, sunt in H332 culpa qui 
 officia deserunt Y45 mollit anim id est laborum"""
 
-rx_code = re.compile(r'[A-Z]\d{2,3}', re.I)  # <1>
+# RE rx_code = new RE(....)
+rx_code = re.compile(r'[A-Z]\d{2,3}')  # <1>
 
 if rx_code.search(s):  # <2>
     print("Found pattern.")
@@ -27,3 +28,5 @@ print()
 
 matches = rx_code.findall(s)
 print("matches:", matches)
+
+#  rx_code.match(...)   rx_code.fullmatch(...)

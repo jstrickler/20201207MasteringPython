@@ -8,10 +8,16 @@ fruits = ["pomegranate", "cherry", "apricot", "date", "apple",
 "elderberry", "peach", "blueberry", "lychee", "grape" ]
 
 
-for i in range(1, 11):
+for i in range(10):
     print("random():", random.random())
     print("randint(1, 2000):", random.randint(1, 2000))
     print("randrange(1, 5):", random.randrange(1, 5))
     print("choice(fruit):", random.choice(fruits))
     print("sample(fruit, 3):", random.sample(fruits, 3))
     print()
+
+for i in range(5):
+    random.shuffle(fruits)
+    print(fruits, '\n')
+
+

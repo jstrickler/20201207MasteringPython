@@ -14,3 +14,9 @@ pattern = r'(?P<letter>[A-Z])(?P<number>\d{2,3})'  # <1>
 
 for m in re.finditer(pattern, s):
     print(m.group('letter'), m.group('number'))  # <2>
+print()
+
+pattern = r'(?:M|U|H)(?:\d{2,3})'  # <1>
+
+for m in re.finditer(pattern, s):
+    print(m.group(0))  # <2>
