@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-import calendar
+from calendar import TextCalendar
 
-tcal = calendar.TextCalendar()  # <1>
-print(tcal.formatmonth(2012, 1))  # <2>
+tcal = TextCalendar()  # <1>
+print(tcal.formatmonth(2020, 12))  # <2>
 
 print()
+

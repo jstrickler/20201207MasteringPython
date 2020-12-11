@@ -24,3 +24,8 @@ def update_code(m):  # <1>
 
 s2 = rx_code.sub(update_code, s)  # <3>
 print(s2)
+
+#  group  0---------------------
+#  group      1----    2----
+#  group      X----    Y----
+#        "....(...)....(...)...."

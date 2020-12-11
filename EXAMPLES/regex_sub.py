@@ -12,6 +12,7 @@ officia deserunt Y45 mollit anim id est laborum"""
 
 rx_code = re.compile(r'(?P<letter>[A-Z])(?P<number>\d{2,3})', re.I)
 
+#               replacement   replacee
 s2 = rx_code.sub("[REDACTED]", s) # <1>
 print(s2)
 print()

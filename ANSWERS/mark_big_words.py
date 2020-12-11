@@ -11,6 +11,8 @@ def mark_word(m):
 
 with open('../DATA/parrot.txt') as parrot_in:
     with open('bigwords.txt', 'w') as bigwords_out:
-        for line in parrot_in:
-            new_line = rx_longword.sub(mark_word, line)
-            bigwords_out.write(new_line)
+        old_text = parrot_in.read()
+        new_text = rx_longword.sub(mark_word, old_text)  # find each match and replace by calling mark_word()
+        bigwords_out.write(new_text)
+
+
