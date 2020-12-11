@@ -9,15 +9,14 @@ import csv
 import pickle
 from collections import namedtuple
 
-fields = 'term firstname lastname birthstate party'
+fields = 'term firstname lastname birthplace birthstate party'
 President = namedtuple('President', fields)
 
 presidents = []
-with open('../DATA/potus.csv') as presidents_in:
-    for raw_line in presidents_in:
-        line = raw_line.rstrip()
-        fields = line.split(',')
-        president = President(*fields)
+with open('../DATA/presidents.csv') as presidents_in:
+    rdr = csv.reader(presidents_in)
+    for row in rdr:
+        president = President(*row)
         presidents.append(president)
 
 p = presidents[15]
