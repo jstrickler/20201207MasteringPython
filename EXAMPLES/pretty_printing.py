@@ -27,6 +27,6 @@ print('With pprint:')
 pprint(struct)  # <3>
 print()
 
-print('With pprint (depth=2):')
-pprint(struct, depth=2)  # <4>
+print('With pprint (depth=3):')
+pprint(struct, depth=3)  # <4>
 print()

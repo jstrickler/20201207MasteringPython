@@ -23,6 +23,9 @@ data = [  # <2>
     colors,
     airports,
 ]
+print("Original data:")
+pprint(data)
+print()
 
 with open('../TEMP/pickled_data.pic', 'wb') as pic_out:  # <3>
     pickle.dump(data, pic_out)  # <4>
@@ -30,4 +33,6 @@ with open('../TEMP/pickled_data.pic', 'wb') as pic_out:  # <3>
 with open('../TEMP/pickled_data.pic', 'rb') as pic_in:  # <5>
     pickled_data = pickle.load(pic_in)  # <6>
 
+print("After unpickling:")
 pprint(pickled_data)  # <7>
+

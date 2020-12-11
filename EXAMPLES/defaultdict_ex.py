@@ -14,7 +14,7 @@ dd['eggs'] = 22
 
 print(dd['spam'])  # <3>
 print(dd['eggs'])
-print(dd['foo'])  # <4>
+print(dd['foo'])  # <4>    dd.get('foo', 0)
 
 print('-' * 60)
 
