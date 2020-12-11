@@ -20,8 +20,8 @@ def main(args):
     )  # <3>
 
     if response.status_code == requests.codes.OK:
-        # pprint(response.content.decode())
-        # print('-' * 60)
+        pprint(response.content.decode())
+        print('-' * 60)
         data = response.json()  # <4>
         for entry in data: # <5>
             if isinstance(entry, dict):
